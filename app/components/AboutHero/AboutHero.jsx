@@ -64,6 +64,7 @@ export default function AboutHero({
                   src="/images/hero-plant.jpg"
                   alt="Industrial oils refinery plant"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 500px"
                   priority
                   className="object-cover"
                 />

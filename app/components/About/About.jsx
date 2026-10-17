@@ -21,6 +21,7 @@ export default function About({
                     src="/images/about-barrels.jpg"
                     alt="MR Suppliers oil barrels and refinery"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 460px"
                     className="object-cover"
                   />
                 </div>
@@ -122,6 +123,7 @@ export default function About({
                     src="/images/about-barrels.jpg"
                     alt="MR Suppliers oil barrels and refinery"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 440px"
                     className="object-cover"
                   />
                 </div>

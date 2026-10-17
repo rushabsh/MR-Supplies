@@ -83,6 +83,7 @@ export default function ContactHero() {
                   src="/images/hero-plant.jpg"
                   alt="MR Suppliers refinery infrastructure"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 500px"
                   priority
                   className="object-cover"
                 />

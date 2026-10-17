@@ -179,7 +179,7 @@ export default function Hero() {
                 </div>
 
                 {/* 2. Supply Stability */}
-                <div className="bg-white py -2 px-3 sm:py-3 sm:px-4 rounded-lg shadow-[0_4px_18px_rgba(0,0,0,0.12)] min-w-[110px] sm:min-w-[140px]">
+                <div className="bg-white py-2 px-3 sm:py-3 sm:px-4 rounded-lg shadow-[0_4px_18px_rgba(0,0,0,0.12)] min-w-[110px] sm:min-w-[140px]">
                   <div className="text-[8.5px] font-bold tracking-[1px] text-[#777777] uppercase mb-1">
                     SUPPLY STABILITY
                   </div>

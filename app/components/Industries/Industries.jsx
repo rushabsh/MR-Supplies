@@ -41,6 +41,7 @@ export default function Industries() {
                   src={ind.image}
                   alt={ind.name}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>

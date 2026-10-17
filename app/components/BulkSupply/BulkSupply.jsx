@@ -15,6 +15,7 @@ export default function BulkSupply({
           src={bgImage}
           alt={title}
           fill
+          sizes="100vw"
           className="object-cover object-[right_center] opacity-90"
         />
         <div className="absolute inset-0 bg-white/92 md:bg-gradient-to-r md:from-white/96 md:via-white/88 md:to-white/10"></div>

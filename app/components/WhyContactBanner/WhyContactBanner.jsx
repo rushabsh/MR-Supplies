@@ -56,6 +56,7 @@ export default function WhyContactBanner() {
               src="/images/quality-bg.jpg"
               alt="Golden industrial oil pouring"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

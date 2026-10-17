@@ -79,6 +79,7 @@ export default function LocationSection() {
                 src="/images/about-barrels.jpg"
                 alt="MR Suppliers barrels and refinery facility"
                 fill
+                sizes="(max-width: 1024px) 100vw, 500px"
                 className="object-cover"
               />
             </div>
