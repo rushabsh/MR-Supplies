@@ -61,7 +61,7 @@ export default function AboutHero({
               {/* Plant Image */}
               <div className="relative w-full h-full rounded-lg overflow-hidden z-2 shadow-[0_12px_36px_rgba(0,0,0,0.15)]">
                 <Image
-                  src="/images/hero-plant.jpg"
+                  src="/images/hero-plant.avif"
                   alt="Industrial oils refinery plant"
                   fill
                   sizes="(max-width: 1024px) 100vw, 500px"

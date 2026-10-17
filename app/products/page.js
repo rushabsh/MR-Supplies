@@ -37,7 +37,7 @@ export default function ProductsPage() {
 
       {/* Looking for Bulk Supply Banner */}
       <BulkSupply
-        bgImage="/images/quality-bg.jpg"
+        bgImage="/images/quality-bg.avif"
         tag="— LOOKING FOR BULK SUPPLY?"
         title="Get the Best Prices for Industrial Oils & Bitumen"
         desc="Contact us today for quotes, product details and bulk supply options. We are here to help you with the right solution for your business."

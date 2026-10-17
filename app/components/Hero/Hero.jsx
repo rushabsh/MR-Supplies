@@ -149,7 +149,7 @@ export default function Hero() {
               <div className="absolute top-0 right-0 w-[90%] h-full bg-primary [clip-path:polygon(25%_0%,100%_0%,100%_100%,0%_100%)] z-1"></div>
               <div className="absolute top-3 right-3 w-[86%] h-[94%] [clip-path:polygon(23%_0%,100%_0%,100%_100%,0%_100%)] z-2 overflow-hidden">
                 <Image
-                  src="/images/hero-plant.jpg"
+                  src="/images/hero-plant.avif"
                   alt="Industrial refinery plant"
                   width={580}
                   height={480}

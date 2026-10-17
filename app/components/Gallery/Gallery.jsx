@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useState } from "react";
 
 const albumImages = [
-  { src: "/images/gallery-1.jpg", alt: "Office glass corridor" },
-  { src: "/images/gallery-logo.jpg", alt: "MR Suppliers company sign" },
-  { src: "/images/gallery-3.jpg", alt: "Executive conference room" },
+  { src: "/images/gallery-1.avif", alt: "Office glass corridor" },
+  { src: "/images/gallery-logo.avif", alt: "MR Suppliers company sign" },
+  { src: "/images/gallery-3.avif", alt: "Executive conference room" },
 ];
 
 export default function Gallery({

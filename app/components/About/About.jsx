@@ -18,7 +18,7 @@ export default function About({
                 <div className="absolute -left-5 top-[25px] bottom-[25px] w-7 bg-primary rounded-[4px] z-1"></div>
                 <div className="relative w-full h-[260px] sm:h-[330px] rounded-[6px] overflow-hidden z-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
                   <Image
-                    src="/images/about-barrels.jpg"
+                    src="/images/about-barrels.avif"
                     alt="MR Suppliers oil barrels and refinery"
                     fill
                     sizes="(max-width: 1024px) 100vw, 460px"
@@ -120,7 +120,7 @@ export default function About({
                 <div className="absolute -top-3.5 -left-3.5 sm:-top-5 sm:-left-5 w-full h-full bg-[#f8be43] rounded-xl z-1"></div>
                 <div className="relative w-full h-[260px] sm:h-[340px] rounded-lg overflow-hidden z-2 shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
                   <Image
-                    src="/images/about-barrels.jpg"
+                    src="/images/about-barrels.avif"
                     alt="MR Suppliers oil barrels and refinery"
                     fill
                     sizes="(max-width: 1024px) 100vw, 440px"

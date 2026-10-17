@@ -3,19 +3,19 @@ import Image from "next/image";
 const industries = [
   {
     name: "Manufacturing Plants & Factories",
-    image: "/images/industry-manufacturing.jpg",
+    image: "/images/industry-manufacturing.avif",
   },
   {
     name: "Construction & Infrastructure",
-    image: "/images/industry-construction.jpg",
+    image: "/images/industry-construction.avif",
   },
   {
     name: "Automotive & Tyre Industry",
-    image: "/images/industry-automotive.jpg",
+    image: "/images/industry-automotive.aviff",
   },
   {
     name: "Industrial Processing Units",
-    image: "/images/industry-processing.jpg",
+    image: "/images/industry-processing.aviff",
   },
 ];
 

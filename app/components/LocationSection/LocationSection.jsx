@@ -76,7 +76,7 @@ export default function LocationSection() {
           <div className="rounded-[10px] overflow-hidden flex flex-col shadow-[0_6px_24px_rgba(0,0,0,0.08)]">
             <div className="relative w-full h-[200px] bg-[#111111]">
               <Image
-                src="/images/about-barrels.jpg"
+                src="/images/about-barrels.avif"
                 alt="MR Suppliers barrels and refinery facility"
                 fill
                 sizes="(max-width: 1024px) 100vw, 500px"

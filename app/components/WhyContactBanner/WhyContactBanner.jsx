@@ -53,7 +53,7 @@ export default function WhyContactBanner() {
           {/* Left Column: Golden Oil Pouring Image */}
           <div className="flex-[0.9] w-full h-[200px] sm:h-[260px] lg:h-[290px] relative rounded-[10px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.12)] bg-[#111111]">
             <Image
-              src="/images/quality-bg.jpg"
+              src="/images/quality-bg.avif"
               alt="Golden industrial oil pouring"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

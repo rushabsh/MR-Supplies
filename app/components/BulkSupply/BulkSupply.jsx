@@ -6,7 +6,7 @@ export default function BulkSupply({
   desc = "Contact us for the best quotes and reliable supply of Diesel Oil, Fuel Oil, Tyre Oil, Bitumen and industrial products.",
   btnText = "Contact Us",
   btnLink = "/#contact",
-  bgImage = "/images/bulk-bg.jpg",
+  bgImage = "/images/bulk-bg.avif",
 }) {
   return (
     <section className="relative py-11 sm:py-[70px] overflow-hidden bg-[#fbf8f2]" id="contact">

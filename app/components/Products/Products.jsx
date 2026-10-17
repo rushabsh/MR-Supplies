@@ -4,27 +4,27 @@ const products = [
   {
     name: "Tyre Oil",
     desc: "Tyre shred wire scrap",
-    image: "/images/product-tyre-oil.jpg",
+    image: "/images/product-tyre-oil.avif",
   },
   {
     name: "Diesel Oil",
     desc: "Industrial fuel oil",
-    image: "/images/product-diesel-oil.jpg",
+    image: "/images/product-diesel-oil.avif",
   },
   {
     name: "Fuel Oil",
     desc: "Heavy fuel oil",
-    image: "/images/product-fuel-oil.jpg",
+    image: "/images/product-fuel-oil.avif",
   },
   {
     name: "Pyrolysis Oil",
     desc: "Tyre pyrolysis oil",
-    image: "/images/product-pyrolysis-oil.jpg",
+    image: "/images/product-pyrolysis-oil.avif",
   },
   {
     name: "Bitumen Oil",
     desc: "Viscosity grade 30 bitumen",
-    image: "/images/product-bitumen-oil.jpg",
+    image: "/images/product-bitumen-oil.avif",
   },
 ];
 

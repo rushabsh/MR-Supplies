@@ -62,7 +62,7 @@ export default function QualityBanner({
     <section className="relative bg-[#0f1318] py-10 pb-[35px] sm:py-[60px] sm:pb-[50px] overflow-hidden text-white">
       <div className="absolute inset-0 z-1">
         <Image
-          src="/images/quality-bg.jpg"
+          src="/images/quality-bg.avif"
           alt="Golden industrial oil pouring"
           fill
           sizes="100vw"
