@@ -53,9 +53,9 @@ export default function About({
             )}
 
             {/* 4 Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-3 border-t border-[#ebebeb] pt-[22px]">
-              <div className="flex items-start gap-2 min-w-0">
-                <div className="text-[#333333] mt-0.5 shrink-0">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-3 border-t border-[#ebebeb] pt-[22px]">
+              <div className="flex items-center sm:items-start gap-2.5 min-w-0 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3 sm:p-0 shadow-xs sm:shadow-none">
+                <div className="text-[#333333] shrink-0">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#222" strokeWidth="1.8">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                     <line x1="16" y1="2" x2="16" y2="6" />
@@ -69,8 +69,8 @@ export default function About({
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 min-w-0">
-                <div className="text-[#333333] mt-0.5 shrink-0">
+              <div className="flex items-center sm:items-start gap-2.5 min-w-0 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3 sm:p-0 shadow-xs sm:shadow-none">
+                <div className="text-[#333333] shrink-0">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#222" strokeWidth="1.8">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                     <circle cx="9" cy="7" r="4" />
@@ -84,8 +84,8 @@ export default function About({
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 min-w-0">
-                <div className="text-[#333333] mt-0.5 shrink-0">
+              <div className="flex items-center sm:items-start gap-2.5 min-w-0 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3 sm:p-0 shadow-xs sm:shadow-none">
+                <div className="text-[#333333] shrink-0">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#222" strokeWidth="1.8">
                     <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
                     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
@@ -97,8 +97,8 @@ export default function About({
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 min-w-0">
-                <div className="text-[#333333] mt-0.5 shrink-0">
+              <div className="flex items-center sm:items-start gap-2.5 min-w-0 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3 sm:p-0 shadow-xs sm:shadow-none">
+                <div className="text-[#333333] shrink-0">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#222" strokeWidth="1.8">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />

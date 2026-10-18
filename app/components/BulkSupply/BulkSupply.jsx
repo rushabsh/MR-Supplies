@@ -18,7 +18,7 @@ export default function BulkSupply({
           sizes="100vw"
           className="object-cover object-[right_center] opacity-90"
         />
-        <div className="absolute inset-0 bg-white/92 md:bg-gradient-to-r md:from-white/96 md:via-white/88 md:to-white/10"></div>
+        <div className="absolute inset-0 bg-black/2 md:bg-gradient-to-r md:from-white/96 md:via-white/30 md:to-white/10"></div>
       </div>
 
       <div className="container">
