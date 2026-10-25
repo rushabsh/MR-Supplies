@@ -41,71 +41,80 @@ const heroFeatures = [
   },
 ];
 
-export default function ContactHero() {
+export default function ContactHero({
+  bgImage = "/images/Contact-background.avif",
+  showImage = false,
+}) {
   return (
-    <section className="relative bg-white py-[30px] pb-[35px] sm:py-[50px] sm:pb-[60px] overflow-hidden">
-      <div className="container">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-[50px]">
-          {/* Left Column */}
-          <div className="flex-[1.15] w-full max-w-full lg:max-w-[580px]">
-            <span className="inline-block text-[11px] font-bold tracking-[1.5px] uppercase text-primary mb-3">— GET IN TOUCH</span>
+    <section className="relative py-10 pb-12 sm:py-14 sm:pb-16 lg:py-16 lg:pb-20 overflow-hidden bg-[#0d1117] text-white">
+      {/* Background Image & Dark Overlay matching Products Page */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={bgImage}
+          alt="MR Suppliers Contact Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center brightness-90"
+        />
+        {/* Same dark gradient overlay as Products page */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1117]/92 via-[#0d1117]/70 to-[#0d1117]/25"></div>
+      </div>
 
-            <h1 className="text-[28px] max-[600px]:leading-[1.18] sm:text-[38px] lg:text-[48px] font-black text-[#111111] leading-[1.12] tracking-[-0.5px] mb-[18px]">
-              LET&apos;S WORK
-              <br />
-              <span className="text-primary">TOGETHER</span>
-            </h1>
+      <div className="container relative z-10">
+        <div className="flex flex-col items-center text-center max-w-[760px] mx-auto">
+          {/* Main Content - Centered */}
+          <span className="inline-block text-[11px] font-bold tracking-[2px] uppercase text-[#fcc509] mb-3">
+            — GET IN TOUCH
+          </span>
 
-            <p className="text-sm leading-[1.7] text-[#555555] mb-7 max-w-[500px]">
-              Contact us for the best quotes and reliable supply of Diesel Oil,
-              Fuel Oil, Tyre Oil, Bitumen and various industrial oils. Our team
-              is ready to assist you with your requirements.
-            </p>
+          <h1 className="text-3xl max-[600px]:leading-[1.18] sm:text-4xl lg:text-[48px] font-black text-white leading-[1.12] tracking-[-0.5px] mb-4">
+            LET&apos;S WORK <span className="text-[#fcc509]">TOGETHER</span>
+          </h1>
 
-            {/* 4 Feature Badges */}
-            <div className="flex flex-col min-[601px]:flex-row flex-wrap gap-3">
-              {heroFeatures.map((f, i) => (
-                <div key={i} className="inline-flex items-center gap-2 bg-[#fbfbfb] border border-[#ebebeb] py-2 px-3.5 rounded-md transition-all duration-200 hover:border-primary hover:bg-white hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] w-full min-[601px]:w-auto">
-                  <span className="flex items-center justify-center text-primary leading-none">{f.icon}</span>
-                  <span className="text-xs font-bold text-[#222222] tracking-[0.2px]">{f.label}</span>
-                </div>
-              ))}
-            </div>
+          <p className="text-sm leading-[1.7] text-[#cccccc] mb-6 max-w-[540px]">
+            Contact us for the best quotes and reliable supply of Diesel Oil,
+            Fuel Oil, Tyre Oil, Bitumen and various industrial oils. Our team
+            is ready to assist you with your requirements.
+          </p>
+
+          {/* 4 Feature Badges centered */}
+          <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-7 w-full">
+            {heroFeatures.map((f, i) => (
+              <div
+                key={i}
+                className="inline-flex items-center gap-2 bg-white/10 border border-white/15 py-2.5 px-4 rounded-xl backdrop-blur-xs transition-all duration-200 hover:border-[#fcc509] hover:bg-white/15 shadow-xs"
+              >
+                <span className="flex items-center justify-center text-[#fcc509] leading-none">
+                  {f.icon}
+                </span>
+                <span className="text-xs font-bold text-white tracking-[0.2px]">
+                  {f.label}
+                </span>
+              </div>
+            ))}
           </div>
 
-          {/* Right Column with Plant Image and Floating Call Card */}
-          <div className="flex-[0.95] relative flex w-full justify-center lg:justify-end">
-            <div className="relative w-full max-w-full lg:max-w-[500px] h-[250px] sm:h-[340px] lg:h-[400px]">
-              <div className="absolute -top-[25px] left-5 -right-[25px] bottom-[25px] bg-gradient-to-br from-[rgba(245,168,0,0.85)] to-[rgba(255,197,51,0.4)] [clip-path:polygon(25%_0%,100%_0%,75%_100%,0%_100%)] rounded-xl z-1"></div>
-
-              <div className="relative w-full h-full rounded-lg overflow-hidden z-2 shadow-[0_12px_36px_rgba(0,0,0,0.15)]">
-                <Image
-                  src="/images/hero-plant.jpg"
-                  alt="MR Suppliers refinery infrastructure"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
-                  priority
-                  className="object-cover"
-                />
+          {/* Immediate Assistance Call Card Centered */}
+          <div className="w-full flex justify-center">
+            <a
+              href="tel:+919876543210"
+              className="group bg-white p-4 sm:p-5 px-6 rounded-2xl shadow-[0_12px_36px_rgba(0,0,0,0.2)] z-10 flex items-center justify-between gap-4 no-underline transition-all duration-200 border border-[#f0f0f0] hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(0,0,0,0.25)] w-full max-w-[420px] text-left"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary text-[#111111] flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(245,168,0,0.3)]">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
               </div>
-
-              {/* Floating Immediate Assistance Card */}
-              <a href="tel:+919876543210" className="group static min-[601px]:absolute mt-4 min-[601px]:mt-0 min-[601px]:-bottom-2.5 lg:min-[993px]:-bottom-5 right-2.5 lg:min-[993px]:-right-2.5 bg-white p-4 px-5 rounded-[10px] shadow-[0_14px_40px_rgba(0,0,0,0.16)] z-10 flex items-center justify-between min-[601px]:justify-start gap-3.5 no-underline transition-all duration-200 border border-[#f0f0f0] hover:-translate-y-0.5 hover:shadow-[0_18px_48px_rgba(0,0,0,0.2)] w-full min-[601px]:w-auto">
-                <div className="w-11 h-11 rounded-full bg-primary text-[#111111] flex items-center justify-center shrink-0">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10.5px] text-[#777777] font-medium">Need Immediate Assistance?</span>
-                  <span className="text-[11px] font-bold text-[#333333]">Call Us Now</span>
-                  <span className="text-base font-black text-[#111111] tracking-[0.3px] leading-[1.2]">+91 98765 43210</span>
-                </div>
-                <div className="w-7 h-7 rounded-full border border-[#e0e0e0] flex items-center justify-center text-[#444444] text-sm transition-all duration-200 group-hover:bg-primary group-hover:border-primary group-hover:text-[#111111]">
-                  <span>→</span>
-                </div>
-              </a>
-            </div>
+              <div className="flex flex-col flex-1">
+                <span className="text-[10.5px] text-[#777777] font-bold uppercase tracking-[0.5px]">Need Immediate Assistance?</span>
+                <span className="text-xs font-bold text-[#333333]">Call Us Directly</span>
+                <span className="text-base sm:text-lg font-black text-[#111111] tracking-[0.3px] leading-[1.2]">+91 98765 43210</span>
+              </div>
+              <div className="w-8 h-8 rounded-full border border-[#e0e0e0] flex items-center justify-center text-[#444444] text-sm transition-all duration-200 group-hover:bg-primary group-hover:border-primary group-hover:text-[#111111]">
+                <span>→</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>

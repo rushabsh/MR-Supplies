@@ -1,61 +1,91 @@
+"use client";
+import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   {
     name: "Tyre Oil",
-    desc: "Tyre shred wire scrap",
-    image: "/images/product-tyre-oil.jpg",
+    desc: "Tyre shred wire scrap boiler/furnace fuel",
+    image: "/images/product-fuel-oil.avif",
   },
   {
     name: "Diesel Oil",
-    desc: "Industrial fuel oil",
-    image: "/images/product-diesel-oil.jpg",
+    desc: "Industrial fuel oil & light diesel",
+    image: "/images/product-diesel-oil.avif",
   },
   {
     name: "Fuel Oil",
-    desc: "Heavy fuel oil",
-    image: "/images/product-fuel-oil.jpg",
+    desc: "Heavy & light fuel oil for furnaces",
+    image: "/images/product-fuel-oil.avif",
   },
   {
     name: "Pyrolysis Oil",
-    desc: "Tyre pyrolysis oil",
-    image: "/images/product-pyrolysis-oil.jpg",
+    desc: "Tyre pyrolysis distillation oil",
+    image: "/images/product-diesel-oil.avif",
   },
   {
     name: "Bitumen Oil",
-    desc: "Viscosity grade 30 bitumen",
-    image: "/images/product-bitumen-oil.jpg",
+    desc: "Viscosity grade 30 & emulsion bitumen",
+    image: "/images/product-bitumen-oil.avif",
   },
 ];
 
 export default function Products() {
+  const scrollContainerRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 300;
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="py-10 pb-[35px] sm:py-[60px] sm:pb-[50px] bg-white" id="products">
+    <section className="py-10 pb-8.75 sm:py-15 sm:pb-12.5 bg-white" id="products">
       <div className="container">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-0 mb-[30px]">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-0 mb-7.5">
           <div>
             <span className="inline-block text-[11px] font-bold tracking-[1.5px] uppercase text-primary mb-2">— OUR PRODUCTS</span>
             <h2 className="text-[26px] sm:text-[32px] font-black text-[#111111] tracking-[-0.5px]">Product Categories</h2>
           </div>
           <div className="flex items-center gap-4">
-            <a href="#products" className="text-[13px] font-bold text-[#111111] transition-all duration-200 hover:text-primary">
+            <Link href="/products" className="text-[13px] font-bold text-[#111111] transition-all duration-200 hover:text-primary">
               View Complete Range
-            </a>
+            </Link>
             <div className="flex gap-2">
-              <button className="w-8 h-8 border-[1.5px] border-[#d5d5d5] bg-white rounded-full cursor-pointer text-base flex items-center justify-center transition-all duration-200 text-[#555555] p-0 hover:border-[#111111] hover:text-[#111111]" aria-label="Previous">
+              <button
+                onClick={() => scroll("left")}
+                className="w-8 h-8 border-[1.5px] border-[#d5d5d5] bg-white rounded-full cursor-pointer text-base flex items-center justify-center transition-all duration-200 text-[#555555] p-0 hover:border-[#111111] hover:text-[#111111]"
+                aria-label="Previous products"
+              >
                 ‹
               </button>
-              <button className="w-8 h-8 border-[1.5px] border-[#d5d5d5] bg-white rounded-full cursor-pointer text-base flex items-center justify-center transition-all duration-200 text-[#555555] p-0 hover:border-[#111111] hover:text-[#111111]" aria-label="Next">
+              <button
+                onClick={() => scroll("right")}
+                className="w-8 h-8 border-[1.5px] border-[#d5d5d5] bg-white rounded-full cursor-pointer text-base flex items-center justify-center transition-all duration-200 text-[#555555] p-0 hover:border-[#111111] hover:text-[#111111]"
+                aria-label="Next products"
+              >
                 ›
               </button>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 min-[481px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-[18px]">
+        <div
+          ref={scrollContainerRef}
+          className="flex overflow-x-auto gap-4 sm:gap-5 pb-4 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {products.map((product) => (
-            <div key={product.name} className="rounded-lg overflow-hidden border border-[#eeeeee] bg-white transition-all duration-200 flex flex-col hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-[3px] hover:border-[#e0e0e0]">
-              <div className="w-full h-[180px] bg-[#fafafa] flex items-center justify-center p-4">
+            <div
+              key={product.name}
+              className="shrink-0 w-60 sm:w-65 lg:w-70 snap-start rounded-xl overflow-hidden border border-[#eeeeee] bg-white transition-all duration-200 flex flex-col hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.75 hover:border-primary"
+            >
+              <div className="w-full h-45 bg-[#fafafa] flex items-center justify-center p-4 relative">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -67,9 +97,12 @@ export default function Products() {
               <div className="p-[16px_14px_18px] flex flex-col flex-1">
                 <h3 className="text-[15px] font-extrabold text-[#111111] mb-1">{product.name}</h3>
                 <p className="text-[11.5px] text-[#777777] leading-[1.4] mb-4 flex-1">{product.desc}</p>
-                <a href="#products" className="inline-flex items-center gap-[5px] text-xs font-bold text-primary transition-all duration-200 hover:text-primary-dark">
+                <Link
+                  href={`/products#${product.name.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="inline-flex items-center gap-1.25 text-xs font-bold text-primary transition-all duration-200 hover:text-primary-dark"
+                >
                   View Products <span className="text-sm">→</span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

@@ -62,7 +62,7 @@ export default function QualityBanner({
     <section className="relative bg-[#0f1318] py-10 pb-[35px] sm:py-[60px] sm:pb-[50px] overflow-hidden text-white">
       <div className="absolute inset-0 z-1">
         <Image
-          src="/images/quality-bg.jpg"
+          src="/images/quality-bg.avif"
           alt="Golden industrial oil pouring"
           fill
           sizes="100vw"
@@ -77,9 +77,12 @@ export default function QualityBanner({
           <h2 className="text-[26px] sm:text-4xl font-black text-white leading-[1.15] mb-4 tracking-[-0.5px]">{title}</h2>
           <p className="text-[13px] sm:text-[13.5px] text-[#c4c4c4] leading-[1.65] mb-6 sm:mb-[38px] max-w-[650px]">{desc}</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {features.map((f) => (
-              <div key={f.title} className="flex items-start gap-3">
+              <div
+                key={f.title}
+                className="flex items-start gap-3.5 bg-white/10 sm:bg-transparent border border-white/15 sm:border-0 rounded-xl p-4 sm:p-0 backdrop-blur-xs"
+              >
                 <div className="shrink-0 mt-0.5">{f.svg}</div>
                 <div className="flex flex-col">
                   <div className="text-sm font-extrabold text-white mb-[3px] leading-[1.25]">{f.title}</div>

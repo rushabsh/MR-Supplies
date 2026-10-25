@@ -1,21 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const industries = [
   {
     name: "Manufacturing Plants & Factories",
-    image: "/images/industry-manufacturing.jpg",
+    image: "/images/industry-manufacturing.avif",
   },
   {
     name: "Construction & Infrastructure",
-    image: "/images/industry-construction.jpg",
+    image: "/images/industry-construction.avif",
   },
   {
     name: "Automotive & Tyre Industry",
-    image: "/images/industry-automotive.jpg",
+    image: "/images/industry-automotive.avif",
   },
   {
     name: "Industrial Processing Units",
-    image: "/images/industry-processing.jpg",
+    image: "/images/industry-processing.avif",
   },
 ];
 
@@ -35,21 +36,29 @@ export default function Industries() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {industries.map((ind) => (
-            <div key={ind.name} className="group rounded-lg overflow-hidden border border-[#eeeeee] bg-white transition-all duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-[3px]">
+            <Link
+              href="/products"
+              key={ind.name}
+              className="group rounded-lg overflow-hidden border border-[#eeeeee] bg-white transition-all duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-[3px] block no-underline"
+            >
               <div className="relative w-full h-[180px] bg-[#f0f0f0]">
                 <Image
                   src={ind.image}
                   alt={ind.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover:scale-103"
                 />
               </div>
               <div className="bg-white py-3.5 px-4 flex items-center justify-between gap-2">
-                <span className="text-[13px] font-extrabold text-[#111111] leading-[1.35]">{ind.name}</span>
-                <span className="text-[15px] font-bold text-[#555555] transition-all duration-200 group-hover:text-primary group-hover:translate-x-0.5">→</span>
+                <span className="text-[13px] font-extrabold text-[#111111] leading-[1.35] group-hover:text-primary transition-colors">
+                  {ind.name}
+                </span>
+                <span className="text-[15px] font-bold text-[#555555] transition-all duration-200 group-hover:text-primary group-hover:translate-x-0.5">
+                  →
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

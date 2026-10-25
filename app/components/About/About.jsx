@@ -8,17 +8,17 @@ export default function About({
   const isStory = variant === "story";
 
   return (
-    <section className="py-10 pb-[35px] sm:py-[65px] sm:pb-[55px] bg-white" id="about">
+    <section className="py-10 pb-8.75 sm:py-16.25 sm:pb-13.75 bg-white" id="about">
       <div className="container">
-        <div className={`flex items-center justify-between gap-10 lg:flex-row flex-col ${isStory ? "lg:gap-[60px]" : "lg:gap-[50px]"}`}>
+        <div className={`flex items-center justify-between gap-10 lg:flex-row flex-col ${isStory ? "lg:gap-15" : "lg:gap-12.5"}`}>
           {/* Image Block (Left in story variant, Right in default variant) */}
           {isStory && (
             <div className="flex-[0.95] relative flex items-center w-full justify-center lg:justify-start">
-              <div className="relative w-full max-w-[460px]">
-                <div className="absolute -left-5 top-[25px] bottom-[25px] w-7 bg-primary rounded-[4px] z-1"></div>
-                <div className="relative w-full h-[260px] sm:h-[330px] rounded-[6px] overflow-hidden z-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+              <div className="relative w-full max-w-115">
+                <div className="absolute -left-5 top-6.25 bottom-6.25 w-7 bg-primary rounded-sm z-1"></div>
+                <div className="relative w-full h-65 sm:h-82.5 rounded-md overflow-hidden z-2 shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
                   <Image
-                    src="/images/about-barrels.jpg"
+                    src="/images/about-barrels.avif"
                     alt="MR Suppliers oil barrels and refinery"
                     fill
                     sizes="(max-width: 1024px) 100vw, 460px"
@@ -30,12 +30,12 @@ export default function About({
           )}
 
           {/* Text Content Column */}
-          <div className="flex-[1.1] w-full max-w-full lg:max-w-[530px]">
+          <div className="flex-[1.1] w-full max-w-full lg:max-w-132.5">
             <span className="inline-block text-[11px] font-bold tracking-[1.5px] uppercase text-primary mb-2.5">
               {isStory ? "— OUR STORY" : tag}
             </span>
             <h2 className="text-[26px] sm:text-[34px] font-black text-[#111111] leading-[1.1] mb-1 tracking-[-0.5px]">MR SUPPLIERS</h2>
-            <p className={`text-[13px] sm:text-sm text-[#222222] font-bold mb-4 ${isStory ? "italic font-medium text-[#444444]" : ""}`}>
+            <p className={`text-[13px] sm:text-sm text-dark-2 font-bold mb-4 ${isStory ? "italic font-medium text-text-body" : ""}`}>
               Industrial Oils &amp; Bitumen Supplier
             </p>
 
@@ -47,15 +47,15 @@ export default function About({
             </p>
 
             {showBtn && !isStory && (
-              <a href="/about" className="inline-flex items-center gap-2 bg-primary text-[#111111] text-xs font-extrabold py-[11px] px-[22px] rounded hover:bg-primary-dark transition-all duration-200 mb-[35px]">
+              <a href="/about" className="inline-flex items-center gap-2 bg-primary text-[#111111] text-xs font-extrabold py-2.75 px-5.5 mb-8.75 rounded hover:bg-primary-dark transition-all duration-200">
                 More About Us <span className="text-[15px] leading-none">→</span>
               </a>
             )}
 
             {/* 4 Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-3 border-t border-[#ebebeb] pt-[22px]">
-              <div className="flex items-start gap-2 min-w-0">
-                <div className="text-[#333333] mt-0.5 shrink-0">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-3 border-t border-[#ebebeb] pt-5.5">
+              <div className="flex items-center sm:items-start gap-2.5 min-w-0 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3 sm:p-0 shadow-xs sm:shadow-none">
+                <div className="text-[#333333] shrink-0">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#222" strokeWidth="1.8">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                     <line x1="16" y1="2" x2="16" y2="6" />
@@ -69,8 +69,8 @@ export default function About({
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 min-w-0">
-                <div className="text-[#333333] mt-0.5 shrink-0">
+              <div className="flex items-center sm:items-start gap-2.5 min-w-0 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3 sm:p-0 shadow-xs sm:shadow-none">
+                <div className="text-[#333333] shrink-0">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#222" strokeWidth="1.8">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                     <circle cx="9" cy="7" r="4" />
@@ -84,8 +84,8 @@ export default function About({
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 min-w-0">
-                <div className="text-[#333333] mt-0.5 shrink-0">
+              <div className="flex items-center sm:items-start gap-2.5 min-w-0 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3 sm:p-0 shadow-xs sm:shadow-none">
+                <div className="text-[#333333] shrink-0">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#222" strokeWidth="1.8">
                     <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
                     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
@@ -97,8 +97,8 @@ export default function About({
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 min-w-0">
-                <div className="text-[#333333] mt-0.5 shrink-0">
+              <div className="flex items-center sm:items-start gap-2.5 min-w-0 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3 sm:p-0 shadow-xs sm:shadow-none">
+                <div className="text-[#333333] shrink-0">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#222" strokeWidth="1.8">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
@@ -115,12 +115,12 @@ export default function About({
           {/* Right Column (Default layout only) */}
           {!isStory && (
             <div className="flex-[0.9] relative flex w-full justify-center lg:justify-end">
-              <div className="relative w-full max-w-[460px] lg:w-[440px]">
+              <div className="relative w-full max-w-115 lg:w-110">
                 {/* Yellow backdrop placed specifically behind image */}
                 <div className="absolute -top-3.5 -left-3.5 sm:-top-5 sm:-left-5 w-full h-full bg-[#f8be43] rounded-xl z-1"></div>
-                <div className="relative w-full h-[260px] sm:h-[340px] rounded-lg overflow-hidden z-2 shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+                <div className="relative w-full h-65 sm:h-85 rounded-lg overflow-hidden z-2 shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
                   <Image
-                    src="/images/about-barrels.jpg"
+                    src="/images/about-barrels.avif"
                     alt="MR Suppliers oil barrels and refinery"
                     fill
                     sizes="(max-width: 1024px) 100vw, 440px"
@@ -129,7 +129,7 @@ export default function About({
                 </div>
 
                 {/* Floating White Since 2018 Card */}
-                <div className="absolute -bottom-2.5 sm:-bottom-[15px] -right-2 sm:-right-[15px] bg-white py-2.5 px-3.5 sm:py-3.5 sm:px-5 rounded-lg flex items-center gap-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)] z-3">
+                <div className="absolute -bottom-2.5 sm:-bottom-3.75 -right-2 sm:-right-3.75 bg-white py-2.5 px-3.5 sm:py-3.5 sm:px-5 rounded-lg flex items-center gap-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)] z-3">
                   <div className="flex items-center justify-center">
                     <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#f5a800" strokeWidth="2">
                       <circle cx="12" cy="8" r="7" />

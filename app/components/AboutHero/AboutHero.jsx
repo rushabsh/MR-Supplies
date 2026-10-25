@@ -5,86 +5,118 @@ export default function AboutHero({
   tag = "— ABOUT US",
   headline = (
     <>
-      A TRUSTED PARTNER
-      <br />
-      IN INDUSTRIAL OILS
-      <br />
-      &amp; <span className="text-primary">BITUMEN</span>
+      A Trusted Partner in<br />
+      Industrial Oils &amp; <span className="text-[#fcc509]">Bitumen</span>
     </>
   ),
   description = "Since 2018, MR Suppliers has been a leading wholesale trader of Diesel Oil, Fuel Oil, Tyre Oil, Bitumen and various industrial oils, catering to diverse industry requirements.",
-  showActions = true,
-  showBadge = true,
+  bgImage = "/images/Products-background.avif",
 }) {
   return (
-    <section className="relative bg-white py-[30px] pb-[25px] sm:py-[50px] sm:pb-10 overflow-hidden">
-      <div className="container">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-9 lg:gap-[50px]">
-          {/* Left Content Column */}
-          <div className="flex-[1.1] w-full max-w-full lg:max-w-[560px]">
-            <span className="inline-block text-[11px] font-bold tracking-[1.5px] uppercase text-primary mb-3.5">
+    <>
+      {/* 1. About Hero Section matching Products Page Hero */}
+      <section className="relative py-14 sm:py-20 lg:py-24 overflow-hidden bg-[#0d1117] text-white">
+        {/* Background Image & Gradient Overlay identical to Products Page */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={bgImage}
+            alt="About MR Suppliers Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center brightness-90"
+          />
+          {/* Subtle gradient ensuring 100% text contrast on the left side */}
+          <div className="absolute inset-0 bg-linear-to-r from-[#0d1117]/90 via-[#0d1117]/60 to-transparent"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="flex flex-col items-center text-center max-w-190 mx-auto">
+            <span className="inline-block text-[11px] font-bold tracking-[2px] uppercase text-[#fcc509] mb-3">
               {tag}
             </span>
-
-            <h1 className="text-[28px] max-[560px]:leading-[1.2] sm:text-[34px] lg:text-[44px] font-black text-[#111111] leading-[1.12] tracking-[-0.5px] mb-[18px]">
+            <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-black text-white tracking-[-0.5px] leading-[1.12] mb-4">
               {headline}
             </h1>
-
-            <p className="text-sm leading-[1.7] text-[#555555] mb-[30px] max-w-[500px]">
+            <p className="text-sm sm:text-[15px] text-[#cccccc] leading-[1.65] mb-6 max-w-140">
               {description}
             </p>
-
-            {showActions && (
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6">
-                <Link
-                  href="/products"
-                  className="group inline-flex items-center justify-center gap-2 bg-primary text-[#111111] text-[13px] font-extrabold py-3 px-6 rounded hover:bg-primary-dark hover:-translate-y-px transition-all duration-200 shadow-[0_4px_14px_rgba(245,168,0,0.35)] w-full sm:w-auto"
-                >
-                  Our Products <span className="text-[15px] leading-none transition-transform duration-200 group-hover:translate-x-0.5">→</span>
-                </Link>
-                <Link
-                  href="/#contact"
-                  className="group inline-flex items-center justify-center sm:justify-start gap-1.5 text-[#111111] text-[13.5px] font-extrabold transition-all duration-200 hover:text-primary-dark"
-                >
-                  Contact Us <span className="text-[15px] leading-none transition-transform duration-200 group-hover:translate-x-0.5">→</span>
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* Right Plant Visual Column with Diagonal Accent & Badge */}
-          <div className="flex-[0.9] relative flex w-full justify-center lg:justify-end">
-            <div className="relative w-full max-w-full lg:max-w-[500px] h-[260px] sm:h-[340px] lg:h-[400px]">
-              {/* Diagonal yellow graphic accent band */}
-              <div className="absolute -top-[25px] left-5 -right-[25px] bottom-[25px] bg-gradient-to-br from-[rgba(245,168,0,0.85)] to-[rgba(255,197,51,0.4)] [clip-path:polygon(25%_0%,100%_0%,75%_100%,0%_100%)] rounded-xl z-1"></div>
-
-              {/* Plant Image */}
-              <div className="relative w-full h-full rounded-lg overflow-hidden z-2 shadow-[0_12px_36px_rgba(0,0,0,0.15)]">
-                <Image
-                  src="/images/hero-plant.jpg"
-                  alt="Industrial oils refinery plant"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
-                  priority
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Top Right "SINCE 2018" Badge */}
-              {showBadge && (
-                <div className="absolute top-2.5 sm:top-5 lg:top-[50px] right-1 sm:right-2.5 lg:-right-6 bg-white py-2.5 px-3.5 sm:py-[18px] sm:px-5 rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.14)] z-3 flex flex-col min-w-[110px] sm:min-w-[140px]">
-                  <span className="text-[11px] font-extrabold text-[#777777] tracking-[1.5px] uppercase">SINCE</span>
-                  <span className="text-[22px] sm:text-[30px] font-black text-[#111111] leading-[1.1] mt-0.5">2018</span>
-                  <span className="block w-[38px] h-[3px] bg-primary my-2.5 rounded-[2px]"></span>
-                  <span className="text-[10px] font-extrabold text-[#555555] tracking-[1px] leading-[1.4] uppercase">
-                    TRUSTED<br />WHOLESALE<br />SUPPLIER
-                  </span>
-                </div>
-              )}
+            <div className="flex items-center justify-center gap-3.5 mb-6">
+              <Link
+                href="/products"
+                className="inline-flex items-center gap-2.5 bg-[#fcc509] hover:bg-[#e0b008] text-[#111111] text-xs font-black py-3.5 px-7 rounded-lg transition-all duration-200 shadow-[0_4px_16px_rgba(252,197,9,0.35)]"
+              >
+                Get Quote <span className="text-sm">→</span>
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white text-xs font-bold py-3 px-6 border border-white/20 rounded-lg backdrop-blur-xs transition-all duration-200"
+              >
+                Contact Us <span className="text-[15px] leading-none">›</span>
+              </Link>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* 2. Feature Strip with cards ONLY on mobile */}
+      <section className="bg-white border-y border-[#eeeeee] py-5">
+        <div className="container">
+          <div className="grid grid-cols-1 min-[480px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 items-center">
+
+            <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
+              <div className="text-primary shrink-0">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Wide Range of Products</span>
+            </div>
+
+            <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
+              <div className="text-primary shrink-0">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Quality Assurance</span>
+            </div>
+
+            <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
+              <div className="text-primary shrink-0">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="1" y="3" width="15" height="13" />
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 8" />
+                  <circle cx="5.5" cy="18.5" r="2.5" />
+                  <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Bulk &amp; Wholesale Supply</span>
+            </div>
+
+            <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
+              <div className="text-primary shrink-0">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Timely Delivery</span>
+            </div>
+
+            <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none min-[480px]:col-span-2 sm:col-span-1 justify-center sm:justify-start">
+              <div className="text-primary shrink-0">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg>
+              </div>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Trusted Supplier</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

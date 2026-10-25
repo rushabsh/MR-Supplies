@@ -129,7 +129,7 @@ const productsData = [
       "Suitable for industrial use",
       "Reliable bulk supply",
     ],
-    image: "/images/product-tyre-oil.jpg",
+    image: "/images/product-tyre-oil.avif",
     imageAlt: "Tyre oil beaker",
     layout: "text-left",
   },
@@ -147,7 +147,7 @@ const productsData = [
       "Meets industrial standards",
       "Available in bulk quantities",
     ],
-    image: "/images/about-barrels.jpg",
+    image: "/images/about-barrels.avif",
     imageAlt: "Diesel oil barrel with MR Suppliers logo",
     layout: "image-left",
   },
@@ -165,7 +165,7 @@ const productsData = [
       "Cost-effective solution",
       "Bulk and wholesale supply",
     ],
-    image: "/images/product-fuel-oil.jpg",
+    image: "/images/product-fuel-oil.avif",
     imageAlt: "Fuel oil flask",
     layout: "text-left",
   },
@@ -183,7 +183,7 @@ const productsData = [
       "Suitable for industrial use",
       "Bulk supply available",
     ],
-    image: "/images/product-pyrolysis-oil.jpg",
+    image: "/images/product-pyrolysis-oil.avif",
     imageAlt: "Pyrolysis oil container bottle",
     layout: "image-left",
   },
@@ -201,7 +201,7 @@ const productsData = [
       "Meets industry standards",
       "Available in bulk supply",
     ],
-    image: "/images/product-bitumen-oil.jpg",
+    image: "/images/product-bitumen-oil.avif",
     imageAlt: "Bitumen drums and refinery",
     layout: "text-left",
   },
@@ -245,11 +245,10 @@ export default function ProductList() {
             return (
               <button
                 key={cat.id}
-                className={`flex flex-col items-center justify-center gap-1.5 sm:gap-2.5 py-3 px-1.5 sm:py-5 sm:px-3 rounded-lg cursor-pointer transition-all duration-200 border text-[#444444] ${
-                  isActive
-                    ? "bg-primary border-primary text-[#111111] shadow-[0_6px_18px_rgba(245,168,0,0.3)] hover:bg-primary-dark"
-                    : "bg-[#fbfbfb] border-[#ebebeb] hover:border-primary hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,0,0,0.05)]"
-                }`}
+                className={`flex flex-col items-center justify-center gap-1.5 sm:gap-2.5 py-3 px-1.5 sm:py-5 sm:px-3 rounded-lg cursor-pointer transition-all duration-200 border text-[#444444] ${isActive
+                  ? "bg-primary border-primary text-[#111111] shadow-[0_6px_18px_rgba(245,168,0,0.3)] hover:bg-primary-dark"
+                  : "bg-[#fbfbfb] border-[#ebebeb] hover:border-primary hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,0,0,0.05)]"
+                  }`}
                 onClick={() => setSelectedCategory(cat.id)}
                 aria-label={`Filter by ${cat.name}`}
               >
@@ -273,9 +272,8 @@ export default function ProductList() {
               <div
                 key={prod.id}
                 id={prod.id}
-                className={`flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-[60px] pb-5 ${
-                  isImageLeft ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-[60px] pb-5 ${isImageLeft ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 {/* Content Side */}
                 <div className="flex-[1.05] w-full max-w-full lg:max-w-[520px]">
