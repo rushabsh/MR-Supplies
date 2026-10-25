@@ -361,18 +361,18 @@ export default function ProductCatalog() {
             className="object-cover object-center brightness-90"
           />
           {/* Subtle gradient to ensure 100% text contrast on the left side */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1117]/90 via-[#0d1117]/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-[#0d1117]/90 via-[#0d1117]/60 to-transparent"></div>
         </div>
 
         <div className="container relative z-10">
-          <div className="flex flex-col items-center text-center max-w-[760px] mx-auto">
+          <div className="flex flex-col items-center text-center max-w-190 mx-auto">
             <span className="inline-block text-[11px] font-bold tracking-[2px] uppercase text-[#fcc509] mb-3">
               — OUR PRODUCTS
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-black text-white tracking-[-0.5px] leading-[1.12] mb-4">
               Industrial Oils<br />&amp; Bitumen Products
             </h1>
-            <p className="text-sm sm:text-[15px] text-[#cccccc] leading-[1.65] mb-6 max-w-[560px]">
+            <p className="text-sm sm:text-[15px] text-[#cccccc] leading-[1.65] mb-6 max-w-140">
               Wide range of quality industrial oils, bitumen and related products for diverse industry requirements.
             </p>
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -398,7 +398,7 @@ export default function ProductCatalog() {
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Wide Range of Products</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Wide Range of Products</span>
             </div>
 
             <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
@@ -408,7 +408,7 @@ export default function ProductCatalog() {
                   <path d="M9 12l2 2 4-4" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Quality Assurance</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Quality Assurance</span>
             </div>
 
             <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
@@ -420,7 +420,7 @@ export default function ProductCatalog() {
                   <circle cx="18.5" cy="18.5" r="2.5" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Bulk &amp; Wholesale Supply</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Bulk &amp; Wholesale Supply</span>
             </div>
 
             <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
@@ -430,7 +430,7 @@ export default function ProductCatalog() {
                   <polyline points="12 6 12 12 16 14" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Timely Delivery</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Timely Delivery</span>
             </div>
 
             <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none min-[480px]:col-span-2 sm:col-span-1 justify-center sm:justify-start">
@@ -439,7 +439,7 @@ export default function ProductCatalog() {
                   <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Trusted Supplier</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Trusted Supplier</span>
             </div>
 
           </div>
@@ -466,7 +466,7 @@ export default function ProductCatalog() {
                         onClick={() => setSelectedCategory(cat.id)}
                         className={`flex items-center justify-between px-3 py-2.5 rounded-lg text-xs font-bold transition-all duration-200 cursor-pointer ${isActive
                           ? "bg-[#fcc509] text-[#111111] shadow-xs"
-                          : "bg-transparent text-[#444444] hover:bg-[#f5f5f5] hover:text-[#111111]"
+                          : "bg-transparent text-text-body hover:bg-[#f5f5f5] hover:text-[#111111]"
                           }`}
                       >
                         <span className="truncate">{cat.name}</span>
@@ -490,7 +490,7 @@ export default function ProductCatalog() {
                   </svg>
                 </div>
                 <h4 className="text-sm font-extrabold text-[#111111] mb-1">Need Help?</h4>
-                <p className="text-xs text-[#666666] leading-[1.5] mb-4">
+                <p className="text-xs text-[#666666] leading-normal mb-4">
                   Get product recommendations and best quotes for bulk orders.
                 </p>
                 <Link
@@ -506,8 +506,8 @@ export default function ProductCatalog() {
             <div className="w-full">
 
               {/* Search Bar */}
-              <div className="flex items-center gap-2 mb-8 bg-white rounded-xl border border-[#e5e7eb] p-1.5 shadow-xs focus-within:border-[#fcc509] focus-within:ring-2 focus-within:ring-[#fcc509]/20 transition-all duration-200">
-                <span className="pl-3 text-[#9ca3af]">
+              <div className="flex items-center gap-2 mb-8 bg-white rounded-xl border border-gray-200 p-1.5 shadow-xs focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all duration-200">
+                <span className="pl-3 text-gray-400">
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
                     <circle cx="11" cy="11" r="8" />
                     <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -518,7 +518,7 @@ export default function ProductCatalog() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search products, categories or grades..."
-                  className="w-full px-2 py-2 text-[13px] bg-transparent text-[#111111] placeholder-[#9ca3af] outline-none"
+                  className="w-full px-2 py-2 text-[13px] bg-transparent text-dark placeholder:text-gray-400 outline-none"
                 />
                 <button
                   onClick={() => { }}
@@ -544,7 +544,7 @@ export default function ProductCatalog() {
                         const el = document.getElementById("all-products-heading");
                         if (el) el.scrollIntoView({ behavior: "smooth" });
                       }}
-                      className="text-xs font-bold text-[#f5a800] hover:text-[#d48f00] flex items-center gap-1 cursor-pointer transition-colors"
+                      className="text-xs font-bold text-primary hover:text-primary-dark flex items-center gap-1 cursor-pointer transition-colors"
                     >
                       View Complete Range <span>→</span>
                     </button>
@@ -596,7 +596,7 @@ export default function ProductCatalog() {
                     <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
-                      className="bg-white border border-[#e5e7eb] rounded-lg px-3 py-1.5 text-xs font-bold text-[#111111] outline-none cursor-pointer focus:border-[#fcc509]"
+                      className="bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-xs font-bold text-dark outline-none cursor-pointer focus:border-primary"
                     >
                       <option value="category">Category</option>
                       <option value="name-asc">Name (A-Z)</option>
@@ -632,7 +632,7 @@ export default function ProductCatalog() {
                           </h3>
                           <button
                             onClick={() => setSelectedCategory(catId)}
-                            className="text-xs font-bold text-primary hover:text-[#d48f00] flex items-center gap-1 cursor-pointer"
+                            className="text-xs font-bold text-primary hover:text-primary-dark flex items-center gap-1 cursor-pointer"
                           >
                             View All <span>→</span>
                           </button>
@@ -662,7 +662,7 @@ export default function ProductCatalog() {
                                 </p>
                                 <button
                                   onClick={() => setEnquiryProduct(prod)}
-                                  className="text-xs font-extrabold text-[#f5a800] hover:text-[#d48f00] flex items-center gap-1 mt-auto cursor-pointer"
+                                  className="text-xs font-extrabold text-primary hover:text-primary-dark flex items-center gap-1 mt-auto cursor-pointer"
                                 >
                                   View Details <span>→</span>
                                 </button>
@@ -702,7 +702,7 @@ export default function ProductCatalog() {
                           </p>
                           <button
                             onClick={() => setEnquiryProduct(prod)}
-                            className="text-xs font-extrabold text-[#f5a800] hover:text-[#d48f00] flex items-center gap-1 mt-auto cursor-pointer"
+                            className="text-xs font-extrabold text-primary hover:text-primary-dark flex items-center gap-1 mt-auto cursor-pointer"
                           >
                             View Details <span>→</span>
                           </button>
@@ -737,7 +737,7 @@ export default function ProductCatalog() {
             {/* Left Column */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="w-6 h-[3px] bg-[#fcc509] rounded-sm"></span>
+                <span className="w-6 h-0.75 bg-[#fcc509] rounded-sm"></span>
                 <span className="text-[11px] font-bold tracking-[2px] uppercase text-[#fcc509]">
                   LOOKING FOR BULK SUPPLY?
                 </span>
@@ -747,7 +747,7 @@ export default function ProductCatalog() {
                 Get the Best Quotes for Industrial Oils &amp; Bitumen
               </h2>
 
-              <p className="text-sm sm:text-[14px] text-[#bbbbbb] leading-[1.65] mb-8 max-w-[500px]">
+              <p className="text-sm sm:text-[14px] text-[#bbbbbb] leading-[1.65] mb-8 max-w-125">
                 Contact us for bulk orders, customized requirements and timely delivery across India.
               </p>
 
@@ -760,7 +760,7 @@ export default function ProductCatalog() {
             </div>
 
             {/* Right Column: Embedded Request a Quote Card */}
-            <div className="bg-white rounded-2xl p-6 sm:p-7 text-[#111111] shadow-[0_16px_48px_rgba(0,0,0,0.4)] border border-white/20 max-w-[460px]">
+            <div className="bg-white rounded-2xl p-6 sm:p-7 text-[#111111] shadow-[0_16px_48px_rgba(0,0,0,0.4)] border border-white/20 max-w-115">
               <h3 className="text-lg font-black text-[#111111] mb-4">Request a Quote</h3>
 
               {bottomQuoteSuccess ? (
@@ -772,13 +772,13 @@ export default function ProductCatalog() {
               ) : (
                 <form onSubmit={handleBottomQuoteSubmit} className="flex flex-col gap-3.5">
                   <div>
-                    <label className="block text-[11.5px] font-bold text-[#222222] mb-1">
+                    <label className="block text-[11.5px] font-bold text-dark-2 mb-1">
                       Product / Category <span className="text-[#ef4444]">*</span>
                     </label>
                     <select
                       required
                       defaultValue=""
-                      className="w-full px-3 py-2 text-xs bg-white border border-[#e5e7eb] rounded-lg text-[#111111] outline-none focus:border-[#fcc509] cursor-pointer"
+                      className="w-full px-3 py-2 text-xs bg-white border border-gray-200 rounded-lg text-dark outline-none focus:border-primary cursor-pointer"
                     >
                       <option value="" disabled>Select Product</option>
                       <option value="Tyre Oil">Tyre Oil</option>
@@ -790,21 +790,21 @@ export default function ProductCatalog() {
                   </div>
 
                   <div>
-                    <label className="block text-[11.5px] font-bold text-[#222222] mb-1">
+                    <label className="block text-[11.5px] font-bold text-dark-2 mb-1">
                       Quantity Required
                     </label>
                     <input
                       type="text"
                       placeholder="Enter quantity (e.g. 10 Ton, 20 Barrels)"
-                      className="w-full px-3 py-2 text-xs bg-white border border-[#e5e7eb] rounded-lg text-[#111111] placeholder-[#9ca3af] outline-none focus:border-[#fcc509]"
+                      className="w-full px-3 py-2 text-xs bg-white border border-gray-200 rounded-lg text-dark placeholder:text-gray-400 outline-none focus:border-primary"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[11.5px] font-bold text-[#222222] mb-1">
+                    <label className="block text-[11.5px] font-bold text-dark-2 mb-1">
                       Your Mobile Number <span className="text-[#ef4444]">*</span>
                     </label>
-                    <div className="flex rounded-lg border border-[#e5e7eb] overflow-hidden focus-within:border-[#fcc509]">
+                    <div className="flex rounded-lg border border-gray-200 overflow-hidden focus-within:border-primary">
                       <span className="inline-flex items-center px-3 bg-[#f9fafb] text-xs font-bold text-[#333333] border-r border-[#e5e7eb]">
                         +91
                       </span>
@@ -812,7 +812,7 @@ export default function ProductCatalog() {
                         type="tel"
                         required
                         placeholder="Enter your number"
-                        className="w-full px-3 py-2 text-xs bg-white text-[#111111] placeholder-[#9ca3af] outline-none"
+                        className="w-full px-3 py-2 text-xs bg-white text-dark placeholder:text-gray-400 outline-none"
                       />
                     </div>
                   </div>
@@ -866,7 +866,7 @@ export default function ProductCatalog() {
                 {enquiryProduct.specs && (
                   <div className="bg-[#fafafa] rounded-xl p-3.5 mb-5 border border-[#eeeeee]">
                     <h5 className="text-[11px] font-bold text-[#111111] uppercase tracking-wider mb-2">Specifications &amp; Highlights:</h5>
-                    <ul className="text-xs text-[#444444] space-y-1">
+                    <ul className="text-xs text-text-body space-y-1">
                       {enquiryProduct.specs.map((s, idx) => (
                         <li key={idx} className="flex items-center gap-2">
                           <span className="text-primary font-bold">✓</span> {s}
@@ -884,7 +884,7 @@ export default function ProductCatalog() {
                         type="text"
                         required
                         placeholder="Your name"
-                        className="w-full px-3 py-2 text-xs bg-white border border-[#e5e7eb] rounded-lg outline-none focus:border-[#fcc509]"
+                        className="w-full px-3 py-2 text-xs bg-white border border-gray-200 rounded-lg outline-none focus:border-primary"
                       />
                     </div>
                     <div>
@@ -893,7 +893,7 @@ export default function ProductCatalog() {
                         type="tel"
                         required
                         placeholder="Mobile number"
-                        className="w-full px-3 py-2 text-xs bg-white border border-[#e5e7eb] rounded-lg outline-none focus:border-[#fcc509]"
+                        className="w-full px-3 py-2 text-xs bg-white border border-gray-200 rounded-lg outline-none focus:border-primary"
                       />
                     </div>
                   </div>
@@ -903,7 +903,7 @@ export default function ProductCatalog() {
                     <input
                       type="text"
                       placeholder="e.g. 50 Barrels / 20 Tons"
-                      className="w-full px-3 py-2 text-xs bg-white border border-[#e5e7eb] rounded-lg outline-none focus:border-[#fcc509]"
+                      className="w-full px-3 py-2 text-xs bg-white border border-gray-200 rounded-lg outline-none focus:border-primary"
                     />
                   </div>
 

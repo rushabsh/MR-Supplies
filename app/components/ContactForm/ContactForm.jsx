@@ -30,7 +30,7 @@ export default function ContactForm() {
           {/* Left Column: Request a Quote Form Card */}
           <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-9 border border-[#ebebeb] shadow-[0_4px_25px_rgba(0,0,0,0.04)]">
             <div className="flex items-center gap-2 mb-2.5">
-              <span className="w-6 h-[3px] bg-[#fcc509] rounded-sm"></span>
+              <span className="w-6 h-0.75 bg-[#fcc509] rounded-sm"></span>
               <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#777777]">
                 SEND US A MESSAGE
               </span>
@@ -65,7 +65,7 @@ export default function ContactForm() {
                 {/* Row 1: Your Name & Company Name */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#222222] mb-1.5">
+                    <label className="block text-xs font-bold text-dark-2 mb-1.5">
                       Your Name <span className="text-[#ef4444]">*</span>
                     </label>
                     <input
@@ -75,12 +75,12 @@ export default function ContactForm() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Enter your name"
-                      className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-[#e5e7eb] rounded-lg text-[#111111] placeholder-[#9ca3af] focus:border-[#fcc509] focus:ring-2 focus:ring-[#fcc509]/20 outline-none transition-all duration-200"
+                      className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-gray-200 rounded-lg text-dark placeholder:text-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-200"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#222222] mb-1.5">
+                    <label className="block text-xs font-bold text-dark-2 mb-1.5">
                       Company Name
                     </label>
                     <input
@@ -89,7 +89,7 @@ export default function ContactForm() {
                       value={formData.company}
                       onChange={handleChange}
                       placeholder="Enter company name"
-                      className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-[#e5e7eb] rounded-lg text-[#111111] placeholder-[#9ca3af] focus:border-[#fcc509] focus:ring-2 focus:ring-[#fcc509]/20 outline-none transition-all duration-200"
+                      className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-gray-200 rounded-lg text-dark placeholder:text-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export default function ContactForm() {
                 {/* Row 2: Email Address & Mobile Number */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#222222] mb-1.5">
+                    <label className="block text-xs font-bold text-dark-2 mb-1.5">
                       Email Address <span className="text-[#ef4444]">*</span>
                     </label>
                     <input
@@ -107,16 +107,16 @@ export default function ContactForm() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Enter your email"
-                      className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-[#e5e7eb] rounded-lg text-[#111111] placeholder-[#9ca3af] focus:border-[#fcc509] focus:ring-2 focus:ring-[#fcc509]/20 outline-none transition-all duration-200"
+                      className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-gray-200 rounded-lg text-dark placeholder:text-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-200"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#222222] mb-1.5">
+                    <label className="block text-xs font-bold text-dark-2 mb-1.5">
                       Mobile Number <span className="text-[#ef4444]">*</span>
                     </label>
-                    <div className="flex rounded-lg border border-[#e5e7eb] overflow-hidden focus-within:border-[#fcc509] focus-within:ring-2 focus-within:ring-[#fcc509]/20 transition-all duration-200">
-                      <span className="inline-flex items-center px-3.5 bg-white text-[13px] font-bold text-[#111111] border-r border-[#e5e7eb] shrink-0 select-none">
+                    <div className="flex rounded-lg border border-gray-200 overflow-hidden focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all duration-200">
+                      <span className="inline-flex items-center px-3.5 bg-white text-[13px] font-bold text-[#111111] border-r border-gray-200 shrink-0 select-none">
                         +91
                       </span>
                       <input
@@ -126,7 +126,7 @@ export default function ContactForm() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Enter your mobile number"
-                        className="w-full px-3.5 py-2.5 text-[13px] bg-white text-[#111111] placeholder-[#9ca3af] outline-none"
+                        className="w-full px-3.5 py-2.5 text-[13px] bg-white text-dark placeholder:text-gray-400 outline-none"
                       />
                     </div>
                   </div>
@@ -134,7 +134,7 @@ export default function ContactForm() {
 
                 {/* Row 3: Product / Category */}
                 <div>
-                  <label className="block text-xs font-bold text-[#222222] mb-1.5">
+                  <label className="block text-xs font-bold text-dark-2 mb-1.5">
                     Product / Category <span className="text-[#ef4444]">*</span>
                   </label>
                   <div className="relative">
@@ -143,7 +143,7 @@ export default function ContactForm() {
                       required
                       value={formData.product}
                       onChange={handleChange}
-                      className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-[#e5e7eb] rounded-lg text-[#111111] focus:border-[#fcc509] focus:ring-2 focus:ring-[#fcc509]/20 outline-none appearance-none pr-10 cursor-pointer"
+                      className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-gray-200 rounded-lg text-dark focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none appearance-none pr-10 cursor-pointer"
                     >
                       <option value="" disabled>Select product category</option>
                       <option value="Diesel Oil">Diesel Oil</option>
@@ -163,7 +163,7 @@ export default function ContactForm() {
 
                 {/* Row 4: Your Message */}
                 <div>
-                  <label className="block text-xs font-bold text-[#222222] mb-1.5">
+                  <label className="block text-xs font-bold text-dark-2 mb-1.5">
                     Your Message <span className="text-[#ef4444]">*</span>
                   </label>
                   <textarea
@@ -173,7 +173,7 @@ export default function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us your requirement (quantity, product details, etc.)"
-                    className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-[#e5e7eb] rounded-lg text-[#111111] placeholder-[#9ca3af] focus:border-[#fcc509] focus:ring-2 focus:ring-[#fcc509]/20 outline-none resize-y transition-all duration-200"
+                    className="w-full px-3.5 py-2.5 text-[13px] bg-white border border-gray-200 rounded-lg text-dark placeholder:text-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none resize-y transition-all duration-200"
                   ></textarea>
                 </div>
 
@@ -196,17 +196,17 @@ export default function ContactForm() {
 
             {/* Header */}
             <div className="flex items-center gap-2 mb-2.5">
-              <span className="w-6 h-[3px] bg-[#fcc509] rounded-sm"></span>
+              <span className="w-6 h-0.75 bg-[#fcc509] rounded-sm"></span>
               <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#777777]">
                 CONTACT INFORMATION
               </span>
             </div>
 
             <h2 className="text-[28px] sm:text-[34px] font-black text-[#111111] tracking-[-0.5px] leading-tight mb-2.5">
-              Reach <span className="text-[#f5a800]">Us</span>
+              Reach <span className="text-primary">Us</span>
             </h2>
 
-            <p className="text-[13px] sm:text-[13.5px] text-[#666666] leading-[1.6] mb-6 max-w-[520px]">
+            <p className="text-[13px] sm:text-[13.5px] text-[#666666] leading-[1.6] mb-6 max-w-130">
               Feel free to contact us through any of the following channels. Our team is always ready to assist you.
             </p>
 
@@ -214,11 +214,11 @@ export default function ContactForm() {
             <div className="relative">
 
               {/* Stack of Cards */}
-              <div className="flex flex-col gap-3.5 relative z-10 xl:pr-[105px] 2xl:pr-[120px]">
+              <div className="flex flex-col gap-3.5 relative z-10 xl:pr-26.25 2xl:pr-30">
 
                 {/* 1. OUR LOCATION with Golden Pin on Dotted India Map */}
-                <div className="relative rounded-2xl bg-gradient-to-r from-[#fffbf0] via-[#fffdf7] to-[#fffbf0] border border-[#fde68a] p-4 sm:p-5 shadow-[0_4px_20px_rgba(245,168,0,0.06)] overflow-hidden flex items-center justify-between gap-3">
-                  <div className="flex items-start gap-3.5 z-10 max-w-[260px] sm:max-w-[310px]">
+                <div className="relative rounded-2xl bg-linear-to-r from-[#fffbf0] via-[#fffdf7] to-[#fffbf0] border border-[#fde68a] p-4 sm:p-5 shadow-[0_4px_20px_rgba(245,168,0,0.06)] overflow-hidden flex items-center justify-between gap-3">
+                  <div className="flex items-start gap-3.5 z-10 max-w-65 sm:max-w-77.5">
                     <div className="w-12 h-12 rounded-2xl bg-[#fcc509] text-[#111111] flex items-center justify-center shrink-0 shadow-sm mt-0.5">
                       <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -246,7 +246,7 @@ export default function ContactForm() {
                   </div>
 
                   {/* Dotted India Map with Golden Pin */}
-                  <div className="relative w-[130px] sm:w-[170px] md:w-[195px] h-[130px] sm:h-[145px] shrink-0 pointer-events-none select-none">
+                  <div className="relative w-32.5 sm:w-42.5 md:w-48.75 h-32.5 sm:h-36.25 shrink-0 pointer-events-none select-none">
                     <Image
                       src="/images/Golden Pin on Dotted India Map.avif"
                       alt="Golden Pin on Dotted India Map - Pune Location"
@@ -295,13 +295,13 @@ export default function ContactForm() {
                       </span>
                       <a
                         href="mailto:info@mrsuppliers.in"
-                        className="text-xs sm:text-[13px] font-bold text-[#222222] hover:text-primary transition-colors leading-[1.4]"
+                        className="text-xs sm:text-[13px] font-bold text-dark-2 hover:text-primary transition-colors leading-[1.4]"
                       >
                         info@mrsuppliers.in
                       </a>
                       <a
                         href="mailto:sales@mrsuppliers.in"
-                        className="text-xs sm:text-[13px] font-bold text-[#222222] hover:text-primary transition-colors leading-[1.4]"
+                        className="text-xs sm:text-[13px] font-bold text-dark-2 hover:text-primary transition-colors leading-[1.4]"
                       >
                         sales@mrsuppliers.in
                       </a>
@@ -322,7 +322,7 @@ export default function ContactForm() {
                       <span className="text-[10px] font-bold text-[#777777] uppercase tracking-[1px] mb-1">
                         BUSINESS TYPE
                       </span>
-                      <p className="text-xs sm:text-[12.5px] font-bold text-[#222222] leading-[1.35]">
+                      <p className="text-xs sm:text-[12.5px] font-bold text-dark-2 leading-[1.35]">
                         Trader - Wholesaler / Distributor &amp; Retail Business
                       </p>
                     </div>
@@ -339,7 +339,7 @@ export default function ContactForm() {
                       <span className="text-[10px] font-bold text-[#777777] uppercase tracking-[1px] mb-1">
                         TOTAL EMPLOYEES
                       </span>
-                      <p className="text-xs sm:text-[13px] font-bold text-[#222222] leading-tight">
+                      <p className="text-xs sm:text-[13px] font-bold text-dark-2 leading-tight">
                         Upto 10 People
                       </p>
                     </div>
@@ -369,7 +369,7 @@ export default function ContactForm() {
                     {/* Right: Golden Laurel Wreath with 8+ Years of Experience */}
                     <div className="flex items-center gap-3.5 pt-3 sm:pt-0 sm:pl-5">
                       <div className="relative flex items-center justify-center shrink-0">
-                        <svg viewBox="0 0 64 64" width="50" height="50" fill="none" className="text-[#f5a800]">
+                        <svg viewBox="0 0 64 64" width="50" height="50" fill="none" className="text-primary">
                           {/* Left Laurel Branch */}
                           <path d="M30 52 C20 50 14 42 14 30 C14 20 18 12 28 8" stroke="#f5a800" strokeWidth="2.5" strokeLinecap="round" />
                           <path d="M15 38 Q9 35 12 32 Q16 33 15 38 Z" fill="#f5a800" />
@@ -402,10 +402,10 @@ export default function ContactForm() {
               </div>
 
               {/* Decorative Industrial Plant Tower on Desktop (matches reference image) */}
-              <div className="hidden xl:block absolute right-0 top-0 bottom-0 w-[110px] 2xl:w-[130px] pointer-events-none select-none overflow-hidden rounded-r-3xl">
+              <div className="hidden xl:block absolute right-0 top-0 bottom-0 w-27.5 2xl:w-32.5 pointer-events-none select-none overflow-hidden rounded-r-3xl">
                 {/* Yellow Angled Chevron Border */}
                 <div className="absolute inset-0 bg-[#fcc509]" style={{ clipPath: "polygon(28% 0, 100% 0, 100% 100%, 0% 100%)" }}>
-                  <div className="absolute inset-[3px] overflow-hidden" style={{ clipPath: "polygon(28% 0, 100% 0, 100% 100%, 0% 100%)" }}>
+                  <div className="absolute inset-0.75 overflow-hidden" style={{ clipPath: "polygon(28% 0, 100% 0, 100% 100%, 0% 100%)" }}>
                     <Image
                       src="/images/hero-plant.avif"
                       alt="MR Suppliers Industrial Refinery"
@@ -416,7 +416,7 @@ export default function ContactForm() {
                   </div>
                 </div>
                 {/* Diagonal yellow accent triangle at top */}
-                <div className="absolute top-0 right-0 w-8 h-8 bg-[#fcc509]" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}></div>
+                <div className="absolute top-0 right-0 w-8 h-8 bg-[#fcc509]" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}></div>
                 {/* Diagonal yellow accent triangle at bottom */}
                 <div className="absolute bottom-0 right-0 w-10 h-10 bg-[#fcc509]" style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}></div>
               </div>

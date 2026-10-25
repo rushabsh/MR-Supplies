@@ -27,18 +27,18 @@ export default function AboutHero({
             className="object-cover object-center brightness-90"
           />
           {/* Subtle gradient ensuring 100% text contrast on the left side */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1117]/90 via-[#0d1117]/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-[#0d1117]/90 via-[#0d1117]/60 to-transparent"></div>
         </div>
 
         <div className="container relative z-10">
-          <div className="flex flex-col items-center text-center max-w-[760px] mx-auto">
+          <div className="flex flex-col items-center text-center max-w-190 mx-auto">
             <span className="inline-block text-[11px] font-bold tracking-[2px] uppercase text-[#fcc509] mb-3">
               {tag}
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-black text-white tracking-[-0.5px] leading-[1.12] mb-4">
               {headline}
             </h1>
-            <p className="text-sm sm:text-[15px] text-[#cccccc] leading-[1.65] mb-6 max-w-[560px]">
+            <p className="text-sm sm:text-[15px] text-[#cccccc] leading-[1.65] mb-6 max-w-140">
               {description}
             </p>
             <div className="flex items-center justify-center gap-3.5 mb-6">
@@ -70,7 +70,7 @@ export default function AboutHero({
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Wide Range of Products</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Wide Range of Products</span>
             </div>
 
             <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
@@ -80,7 +80,7 @@ export default function AboutHero({
                   <path d="M9 12l2 2 4-4" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Quality Assurance</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Quality Assurance</span>
             </div>
 
             <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
@@ -92,7 +92,7 @@ export default function AboutHero({
                   <circle cx="18.5" cy="18.5" r="2.5" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Bulk &amp; Wholesale Supply</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Bulk &amp; Wholesale Supply</span>
             </div>
 
             <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none">
@@ -102,7 +102,7 @@ export default function AboutHero({
                   <polyline points="12 6 12 12 16 14" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Timely Delivery</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Timely Delivery</span>
             </div>
 
             <div className="flex items-center gap-3 bg-[#f9fafb] sm:bg-transparent border border-[#e5e7eb] sm:border-0 rounded-xl p-3.5 sm:p-0 shadow-xs sm:shadow-none min-[480px]:col-span-2 sm:col-span-1 justify-center sm:justify-start">
@@ -111,7 +111,7 @@ export default function AboutHero({
                   <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-[#222222] leading-tight">Trusted Supplier</span>
+              <span className="text-xs font-bold text-dark-2 leading-tight">Trusted Supplier</span>
             </div>
 
           </div>

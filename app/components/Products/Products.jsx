@@ -45,9 +45,9 @@ export default function Products() {
   };
 
   return (
-    <section className="py-10 pb-[35px] sm:py-[60px] sm:pb-[50px] bg-white" id="products">
+    <section className="py-10 pb-8.75 sm:py-15 sm:pb-12.5 bg-white" id="products">
       <div className="container">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-0 mb-[30px]">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-0 mb-7.5">
           <div>
             <span className="inline-block text-[11px] font-bold tracking-[1.5px] uppercase text-primary mb-2">— OUR PRODUCTS</span>
             <h2 className="text-[26px] sm:text-[32px] font-black text-[#111111] tracking-[-0.5px]">Product Categories</h2>
@@ -83,9 +83,9 @@ export default function Products() {
           {products.map((product) => (
             <div
               key={product.name}
-              className="shrink-0 w-[240px] sm:w-[260px] lg:w-[280px] snap-start rounded-xl overflow-hidden border border-[#eeeeee] bg-white transition-all duration-200 flex flex-col hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-[3px] hover:border-primary"
+              className="shrink-0 w-60 sm:w-65 lg:w-70 snap-start rounded-xl overflow-hidden border border-[#eeeeee] bg-white transition-all duration-200 flex flex-col hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.75 hover:border-primary"
             >
-              <div className="w-full h-[180px] bg-[#fafafa] flex items-center justify-center p-4 relative">
+              <div className="w-full h-45 bg-[#fafafa] flex items-center justify-center p-4 relative">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -99,7 +99,7 @@ export default function Products() {
                 <p className="text-[11.5px] text-[#777777] leading-[1.4] mb-4 flex-1">{product.desc}</p>
                 <Link
                   href={`/products#${product.name.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="inline-flex items-center gap-[5px] text-xs font-bold text-primary transition-all duration-200 hover:text-primary-dark"
+                  className="inline-flex items-center gap-1.25 text-xs font-bold text-primary transition-all duration-200 hover:text-primary-dark"
                 >
                   View Products <span className="text-sm">→</span>
                 </Link>

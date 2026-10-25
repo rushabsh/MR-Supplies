@@ -9,10 +9,10 @@ export default function LocationSection() {
     <section className="py-8 pb-14 sm:py-12 sm:pb-20 bg-[#fafafa]" id="location">
       <div className="container">
         {/* Outer unified card matching reference image */}
-        <div className="rounded-[28px] sm:rounded-[36px] border border-[#e5e7eb] bg-[#f8fafc] overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.06)] min-h-[540px] lg:min-h-[580px] flex flex-col lg:flex-row items-center justify-end">
+        <div className="rounded-[28px] sm:rounded-[36px] border border-[#e5e7eb] bg-[#f8fafc] overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.06)] min-h-135 lg:min-h-145 flex flex-col lg:flex-row items-center justify-end">
           
           {/* Map Layer (spanning full background on desktop, top section on mobile) */}
-          <div className="relative w-full h-[360px] sm:h-[420px] lg:h-full lg:absolute lg:inset-0 z-0 overflow-hidden bg-[#edf2f7]">
+          <div className="relative w-full h-90 sm:h-105 lg:h-full lg:absolute lg:inset-0 z-0 overflow-hidden bg-[#edf2f7]">
             
             {/* View Switcher Controls (Styled Graphic Map vs Live Interactive Google Map) */}
             <div className="absolute top-4 left-4 z-20 flex items-center gap-1 bg-white/95 backdrop-blur-md p-1 rounded-xl shadow-md border border-gray-200/80">
@@ -21,7 +21,7 @@ export default function LocationSection() {
                 onClick={() => setActiveTab("styled")}
                 className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg transition-all duration-200 cursor-pointer ${
                   activeTab === "styled"
-                    ? "bg-[#f5a800] text-[#111111] shadow-xs"
+                    ? "bg-primary text-[#111111] shadow-xs"
                     : "text-[#64748b] hover:text-[#111111] hover:bg-gray-100"
                 }`}
                 title="Design Map View"
@@ -39,7 +39,7 @@ export default function LocationSection() {
                 onClick={() => setActiveTab("live")}
                 className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg transition-all duration-200 cursor-pointer ${
                   activeTab === "live"
-                    ? "bg-[#f5a800] text-[#111111] shadow-xs"
+                    ? "bg-primary text-[#111111] shadow-xs"
                     : "text-[#64748b] hover:text-[#111111] hover:bg-gray-100"
                 }`}
                 title="Interactive Google Map"
@@ -361,12 +361,12 @@ export default function LocationSection() {
           </div>
 
           {/* Right Floating Card: Visit Our Office (100% matched with design image) */}
-          <div className="relative z-10 w-full lg:max-w-[430px] xl:max-w-[450px] p-4 sm:p-6 lg:p-7 xl:p-8">
-            <div className="bg-white rounded-[24px] sm:rounded-3xl p-6 sm:p-7 xl:p-8 shadow-[0_16px_50px_rgba(0,0,0,0.09)] border border-[#eeeeee]">
+          <div className="relative z-10 w-full lg:max-w-107.5 xl:max-w-112.5 p-4 sm:p-6 lg:p-7 xl:p-8">
+            <div className="bg-white rounded-3xl p-6 sm:p-7 xl:p-8 shadow-[0_16px_50px_rgba(0,0,0,0.09)] border border-[#eeeeee]">
               
               {/* Header Pill */}
               <div className="flex items-center gap-2.5 mb-2.5">
-                <span className="w-6 h-[3px] bg-[#f5a800] rounded-full inline-block"></span>
+                <span className="w-6 h-0.75 bg-primary rounded-full inline-block"></span>
                 <span className="text-[11px] font-extrabold tracking-[2px] uppercase text-[#64748b]">
                   OUR LOCATION
                 </span>
@@ -374,7 +374,7 @@ export default function LocationSection() {
 
               {/* Main Headline */}
               <h2 className="text-2xl sm:text-[32px] font-black text-[#111111] mb-2.5 tracking-tight leading-tight">
-                Visit Our <span className="text-[#f5a800]">Office</span>
+                Visit Our <span className="text-primary">Office</span>
               </h2>
 
               {/* Description */}
@@ -384,7 +384,7 @@ export default function LocationSection() {
 
               {/* Address Highlight Box */}
               <div className="bg-[#fffbeb] rounded-2xl p-3.5 sm:p-4 flex items-center gap-3.5 mb-4 border border-[#fef3c7]">
-                <div className="w-11 h-11 rounded-xl bg-[#f5a800] text-[#111111] flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-11 h-11 rounded-xl bg-primary text-[#111111] flex items-center justify-center shrink-0 shadow-xs">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 21s-8-7.5-8-12a8 8 0 1 1 16 0c0 4.5-8 12-8 12z" />
                     <circle cx="12" cy="9" r="2.5" />
@@ -405,7 +405,7 @@ export default function LocationSection() {
                 href="https://www.google.com/maps/dir/?api=1&destination=MR+Suppliers+Pune+Maharashtra+India"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-[#f5a800] hover:bg-[#e09400] text-[#111111] text-xs sm:text-sm font-black py-3.5 px-6 rounded-xl transition-all duration-200 shadow-[0_4px_16px_rgba(245,168,0,0.35)] hover:shadow-[0_6px_22px_rgba(245,168,0,0.45)] flex items-center justify-center gap-2 group no-underline cursor-pointer"
+                className="w-full bg-primary hover:bg-[#e09400] text-[#111111] text-xs sm:text-sm font-black py-3.5 px-6 rounded-xl transition-all duration-200 shadow-[0_4px_16px_rgba(245,168,0,0.35)] hover:shadow-[0_6px_22px_rgba(245,168,0,0.45)] flex items-center justify-center gap-2 group no-underline cursor-pointer"
               >
                 {/* Navigation arrow icon tilted */}
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" className="shrink-0 -rotate-45">
@@ -419,7 +419,7 @@ export default function LocationSection() {
               <div className="grid grid-cols-2 gap-3 pt-5 mt-5 border-t border-[#f1f5f9]">
                 {/* Office Hours */}
                 <div className="flex items-start gap-2.5">
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#fffbeb] text-[#f5a800] flex items-center justify-center shrink-0 border border-[#fef3c7] mt-0.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#fffbeb] text-primary flex items-center justify-center shrink-0 border border-[#fef3c7] mt-0.5">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <polyline points="12 6 12 12 16 14" />
@@ -440,7 +440,7 @@ export default function LocationSection() {
 
                 {/* Nearby Landmark */}
                 <div className="flex items-start gap-2.5">
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#fffbeb] text-[#f5a800] flex items-center justify-center shrink-0 border border-[#fef3c7] mt-0.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#fffbeb] text-primary flex items-center justify-center shrink-0 border border-[#fef3c7] mt-0.5">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
                       <line x1="9" y1="22" x2="9" y2="22.01" />
