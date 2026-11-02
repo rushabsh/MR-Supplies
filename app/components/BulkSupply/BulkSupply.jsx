@@ -16,6 +16,8 @@ export default function BulkSupply({
           alt={title}
           fill
           sizes="100vw"
+          quality={70}
+          loading="lazy"
           className="object-cover object-[right_center] opacity-90"
         />
         <div className="absolute inset-0 bg-black/2 md:bg-linear-to-r md:from-white/96 md:via-white/30 md:to-white/10"></div>

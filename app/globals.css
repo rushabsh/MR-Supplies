@@ -168,3 +168,53 @@ body {
 .view-all-link:hover {
   color: var(--color-primary-dark);
 }
+
+
+/* ============================================
+   SKELETON HTML LOADING SHIMMER
+   ============================================ */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e4e4e4 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-loading-dark {
+  background: linear-gradient(90deg, #161c24 25%, #232c38 37%, #161c24 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+
+/* ============================================
+   SKELETON HTML LOADING SHIMMER
+   ============================================ */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e4e4e4 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-loading-dark {
+  background: linear-gradient(90deg, #161c24 25%, #232c38 37%, #161c24 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}

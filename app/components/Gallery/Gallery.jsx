@@ -91,7 +91,9 @@ export default function Gallery({
                     src={img.src}
                     alt={img.alt}
                     fill
-                    sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 320px, (max-width: 1024px) 400px, 360px"
+                    quality={70}
+                    loading="lazy"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>

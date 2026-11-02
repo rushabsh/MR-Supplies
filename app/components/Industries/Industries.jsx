@@ -46,7 +46,9 @@ export default function Industries() {
                   src={ind.image}
                   alt={ind.name}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 380px, (max-width: 1024px) 50vw, 280px"
+                  quality={70}
+                  loading="lazy"
                   className="object-cover transition-transform duration-300 group-hover:scale-103"
                 />
               </div>

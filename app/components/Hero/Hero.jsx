@@ -11,6 +11,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
+          quality={70}
           className="object-cover object-center brightness-90"
         />
         {/* Same dark gradient overlay as Products page */}

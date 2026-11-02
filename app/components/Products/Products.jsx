@@ -89,9 +89,11 @@ export default function Products() {
                 <Image
                   src={product.image}
                   alt={product.name}
-                  width={220}
-                  height={180}
-                  className="max-w-full max-h-full object-contain"
+                  fill
+                  sizes="(max-width: 640px) 240px, (max-width: 1024px) 260px, 280px"
+                  quality={70}
+                  loading="lazy"
+                  className="object-contain p-2"
                 />
               </div>
               <div className="p-[16px_14px_18px] flex flex-col flex-1">

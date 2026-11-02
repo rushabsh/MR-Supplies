@@ -44,7 +44,7 @@ export default function WhyContactBanner() {
           src="/images/contactsection-bottom.avif"
           alt="Industrial Refinery Supply Partnership"
           fill
-          priority
+          loading="lazy"
           sizes="100vw"
           className="object-cover object-left"
         />

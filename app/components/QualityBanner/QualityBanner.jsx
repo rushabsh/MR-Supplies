@@ -66,6 +66,8 @@ export default function QualityBanner({
           alt="Golden industrial oil pouring"
           fill
           sizes="100vw"
+          quality={70}
+          loading="lazy"
           className="object-cover object-[right_center] opacity-55"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f1318]/98 via-[#0f1318]/92 to-[#0f1318]/40"></div>

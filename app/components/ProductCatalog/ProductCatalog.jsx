@@ -354,6 +354,7 @@ export default function ProductCatalog() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/Products-background.avif"
+            quality={70}
             alt="Industrial Oils & Bitumen Products"
             fill
             priority
@@ -563,6 +564,8 @@ export default function ProductCatalog() {
                             alt={cat.name}
                             fill
                             sizes="(max-width: 640px) 50vw, 25vw"
+                                  quality={70}
+                                  loading="lazy"
                             className="object-contain p-2 group-hover:scale-105 transition-transform duration-200"
                           />
                         </div>
@@ -650,6 +653,8 @@ export default function ProductCatalog() {
                                   alt={prod.title}
                                   fill
                                   sizes="(max-width: 640px) 50vw, 25vw"
+                                  quality={70}
+                                  loading="lazy"
                                   className="object-contain p-2 group-hover:scale-105 transition-transform duration-200"
                                 />
                               </div>
@@ -687,6 +692,8 @@ export default function ProductCatalog() {
                             alt={prod.title}
                             fill
                             sizes="(max-width: 640px) 50vw, 25vw"
+                                  quality={70}
+                                  loading="lazy"
                             className="object-contain p-2 group-hover:scale-105 transition-transform duration-200"
                           />
                         </div>
