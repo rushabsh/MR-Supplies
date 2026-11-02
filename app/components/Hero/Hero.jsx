@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
@@ -15,7 +16,7 @@ export default function Hero() {
           className="object-cover object-center brightness-90"
         />
         {/* Same dark gradient overlay as Products page */}
-        <div className="absolute inset-0 bg-linear-to-r from-[#0d1117]/92 via-[#0d1117]/70 to-[#0d1117]/25"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1117]/92 via-[#0d1117]/70 to-[#0d1117]/25 pointer-events-none"></div>
       </div>
 
       <div className="container relative z-10">
@@ -40,19 +41,19 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-3.5 mb-7 sm:mb-9 w-full sm:w-auto">
-              <a
+              <Link
                 href="/products"
                 className="inline-flex items-center justify-center gap-2 bg-[#fcc509] hover:bg-[#e0b008] text-[#111111] text-xs font-black tracking-[0.5px] py-3.5 px-6 rounded-lg transition-all duration-200 shadow-[0_4px_16px_rgba(252,197,9,0.35)] w-full sm:w-auto text-center"
               >
                 <span className="text-sm font-black">↗</span>
                 EXPLORE OUR WHOLESALE PRODUCTS
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-1.5 bg-white/10 hover:bg-white/20 text-white text-xs font-bold py-3.25 px-6 border border-white/20 rounded-lg backdrop-blur-xs transition-all duration-200 w-full sm:w-auto text-center"
               >
                 Contact Us <span className="text-[15px] leading-none">›</span>
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Stats 2x2 Grid matching 2nd image (Mobile Only) */}

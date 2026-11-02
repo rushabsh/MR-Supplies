@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useState } from "react";
 
@@ -401,7 +402,7 @@ export default function LocationSection() {
               </div>
 
               {/* Get Directions Full-Width Button */}
-              <a
+              <Link
                 href="https://www.google.com/maps/dir/?api=1&destination=MR+Suppliers+Pune+Maharashtra+India"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -413,7 +414,7 @@ export default function LocationSection() {
                 </svg>
                 <span>Get Directions</span>
                 <span className="text-base font-bold transition-transform duration-200 group-hover:translate-x-1">→</span>
-              </a>
+              </Link>
 
               {/* Bottom Details Row: Office Hours & Nearby Landmark */}
               <div className="grid grid-cols-2 gap-3 pt-5 mt-5 border-t border-[#f1f5f9]">
