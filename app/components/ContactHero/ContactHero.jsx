@@ -1,10 +1,18 @@
+import Link from "next/link";
 import Image from "next/image";
 
 const heroFeatures = [
   {
     label: "Quick Response",
     icon: (
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
+      <svg
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
         <circle cx="12" cy="12" r="10" />
         <polyline points="12 6 12 12 16 14" />
       </svg>
@@ -13,7 +21,14 @@ const heroFeatures = [
   {
     label: "Competitive Pricing",
     icon: (
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
+      <svg
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
         <line x1="12" y1="1" x2="12" y2="23" />
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
       </svg>
@@ -22,7 +37,14 @@ const heroFeatures = [
   {
     label: "Bulk Supply Available",
     icon: (
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
+      <svg
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
         <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
         <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
       </svg>
@@ -31,7 +53,14 @@ const heroFeatures = [
   {
     label: "Pan India Delivery",
     icon: (
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
+      <svg
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
         <rect x="1" y="3" width="15" height="13" />
         <polygon points="16 8 20 8 23 11 23 16 16 16 8" />
         <circle cx="5.5" cy="18.5" r="2.5" />
@@ -74,8 +103,8 @@ export default function ContactHero({
 
           <p className="text-sm leading-[1.7] text-[#cccccc] mb-6 max-w-[540px]">
             Contact us for the best quotes and reliable supply of Diesel Oil,
-            Fuel Oil, Tyre Oil, Bitumen and various industrial oils. Our team
-            is ready to assist you with your requirements.
+            Fuel Oil, Tyre Oil, Bitumen and various industrial oils. Our team is
+            ready to assist you with your requirements.
           </p>
 
           {/* 4 Feature Badges centered */}
@@ -97,24 +126,35 @@ export default function ContactHero({
 
           {/* Immediate Assistance Call Card Centered */}
           <div className="w-full flex justify-center">
-            <a
+            <Link
               href="tel:+919876543210"
               className="group bg-white p-4 sm:p-5 px-6 rounded-2xl shadow-[0_12px_36px_rgba(0,0,0,0.2)] z-10 flex items-center justify-between gap-4 no-underline transition-all duration-200 border border-[#f0f0f0] hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(0,0,0,0.25)] w-full max-w-[420px] text-left"
             >
               <div className="w-12 h-12 rounded-full bg-primary text-[#111111] flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(245,168,0,0.3)]">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="currentColor"
+                >
                   <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                 </svg>
               </div>
-              <div className="flex flex-col flex-1"> 
-                <span className="text-[10.5px] text-[#777777] font-bold uppercase tracking-[0.5px]">Need Immediate Assistance?</span>
-                <span className="text-xs font-bold text-[#333333]">Call Us Directly</span>
-                <span className="text-base sm:text-lg font-black text-[#111111] tracking-[0.3px] leading-[1.2]">+91 98765 43210</span>
+              <div className="flex flex-col flex-1">
+                <span className="text-[10.5px] text-[#777777] font-bold uppercase tracking-[0.5px]">
+                  Need Immediate Assistance?
+                </span>
+                <span className="text-xs font-bold text-[#333333]">
+                  Call Us Directly
+                </span>
+                <span className="text-base sm:text-lg font-black text-[#111111] tracking-[0.3px] leading-[1.2]">
+                  +91 98765 43210
+                </span>
               </div>
               <div className="w-8 h-8 rounded-full border border-[#e0e0e0] flex items-center justify-center text-[#444444] text-sm transition-all duration-200 group-hover:bg-primary group-hover:border-primary group-hover:text-[#111111]">
                 <span>→</span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

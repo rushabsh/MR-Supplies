@@ -377,12 +377,12 @@ export default function ProductCatalog() {
               Wide range of quality industrial oils, bitumen and related products for diverse industry requirements.
             </p>
             <div className="flex items-center justify-center gap-3 mb-6">
-              <a
+              <Link
                 href="#catalog-section"
                 className="inline-flex items-center gap-2.5 bg-[#fcc509] hover:bg-[#e0b008] text-[#111111] text-xs font-black py-3.5 px-7 rounded-lg transition-all duration-200 shadow-[0_4px_16px_rgba(252,197,9,0.35)]"
               >
                 Get Quote <span className="text-sm">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -921,7 +921,7 @@ export default function ProductCatalog() {
                     >
                       Send Inquiry Now →
                     </button>
-                    <a
+                    <Link
                       href="https://wa.me/919876543210"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -929,7 +929,7 @@ export default function ProductCatalog() {
                       title="WhatsApp Quote"
                     >
                       WhatsApp
-                    </a>
+                    </Link>
                   </div>
                 </form>
               </div>

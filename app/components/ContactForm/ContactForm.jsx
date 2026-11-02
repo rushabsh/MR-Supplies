@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -234,14 +235,14 @@ export default function ContactForm() {
                       <p className="text-xs sm:text-[13px] text-[#555555] font-medium leading-[1.4] mb-3">
                         Pune, Maharashtra, India
                       </p>
-                      <a
+                      <Link
                         href="https://maps.google.com/?q=MIDC+Pune"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 bg-[#fcc509] hover:bg-[#e0b008] text-[#111111] text-xs font-black py-2.5 px-4 rounded-xl transition-all duration-200 shadow-xs hover:shadow-md w-fit"
                       >
                         Get Directions <span className="text-sm font-black">→</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -270,12 +271,12 @@ export default function ContactForm() {
                       <span className="text-[10px] font-bold text-[#777777] uppercase tracking-[1px] mb-1">
                         CALL US
                       </span>
-                      <a
+                      <Link
                         href="tel:+919876543210"
                         className="text-[15px] sm:text-base font-black text-[#111111] tracking-tight hover:text-primary transition-colors leading-tight"
                       >
                         +91 98765 43210
-                      </a>
+                      </Link>
                       <span className="text-[11px] text-[#777777] font-medium mt-1 leading-tight">
                         Mon - Sat, 9:00 AM - 6:00 PM
                       </span>
@@ -293,18 +294,18 @@ export default function ContactForm() {
                       <span className="text-[10px] font-bold text-[#777777] uppercase tracking-[1px] mb-1">
                         EMAIL US
                       </span>
-                      <a
+                      <Link
                         href="mailto:info@mrsuppliers.in"
                         className="text-xs sm:text-[13px] font-bold text-dark-2 hover:text-primary transition-colors leading-[1.4]"
                       >
                         info@mrsuppliers.in
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href="mailto:sales@mrsuppliers.in"
                         className="text-xs sm:text-[13px] font-bold text-dark-2 hover:text-primary transition-colors leading-[1.4]"
                       >
                         sales@mrsuppliers.in
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

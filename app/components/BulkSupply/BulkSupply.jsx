@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function BulkSupply({
@@ -28,9 +29,9 @@ export default function BulkSupply({
           <span className="inline-block text-[11px] font-bold tracking-[1.5px] uppercase text-primary mb-2.5">{tag}</span>
           <h2 className="text-[26px] sm:text-[34px] font-black text-[#111111] mb-3.5 leading-[1.15] tracking-[-0.5px]">{title}</h2>
           <p className="text-[13.5px] text-text-body leading-[1.65] mb-6">{desc}</p>
-          <a href={btnLink} className="inline-flex items-center gap-2 bg-primary text-[#111111] text-[12.5px] font-extrabold py-3 px-6 rounded-full transition-all duration-200 shadow-[0_4px_14px_rgba(245,168,0,0.3)] hover:bg-primary-dark">
+          <Link href={btnLink} className="inline-flex items-center gap-2 bg-primary text-[#111111] text-[12.5px] font-extrabold py-3 px-6 rounded-full transition-all duration-200 shadow-[0_4px_14px_rgba(245,168,0,0.3)] hover:bg-primary-dark">
             {btnText} <span className="text-[15px] leading-none">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

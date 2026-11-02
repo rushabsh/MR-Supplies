@@ -93,7 +93,7 @@ export default function Navbar({ activePage = "home" }) {
 
           {/* Desktop Actions */}
           <div className="flex items-center gap-3">
-            <a
+            <Link
               href="tel:+919876543210"
               className="hidden min-[881px]:inline-flex items-center gap-[7px] bg-primary text-[#1a1a1a] font-bold text-[12.5px] py-[9px] px-5 rounded-full transition-all duration-200 no-underline shadow-[0_2px_8px_rgba(245,168,0,0.25)] whitespace-nowrap hover:bg-primary-dark"
             >
@@ -107,7 +107,7 @@ export default function Navbar({ activePage = "home" }) {
                 <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
               <span>Call Now</span>
-            </a>
+            </Link>
 
             {/* Mobile Menu Toggle Button */}
             <button
@@ -195,7 +195,7 @@ export default function Navbar({ activePage = "home" }) {
           </nav>
 
           <div className="pt-3.5 mt-2.5 border-t border-[#f0f0f0]">
-            <a
+            <Link
               href="tel:+919876543210"
               className="flex items-center justify-center gap-2 w-full bg-primary text-[#111111] font-extrabold text-[13.5px] p-3 rounded-[6px] no-underline shadow-[0_3px_10px_rgba(245,168,0,0.25)]"
               onClick={closeMenu}
@@ -209,7 +209,7 @@ export default function Navbar({ activePage = "home" }) {
                 <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
               <span>+91 98765 43210</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

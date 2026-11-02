@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function About({
@@ -49,9 +50,9 @@ export default function About({
             </p>
 
             {showBtn && !isStory && (
-              <a href="/about" className="inline-flex items-center gap-2 bg-primary text-[#111111] text-xs font-extrabold py-2.75 px-5.5 mb-8.75 rounded hover:bg-primary-dark transition-all duration-200">
+              <Link href="/about" className="inline-flex items-center gap-2 bg-primary text-[#111111] text-xs font-extrabold py-2.75 px-5.5 mb-8.75 rounded hover:bg-primary-dark transition-all duration-200">
                 More About Us <span className="text-[15px] leading-none">→</span>
-              </a>
+              </Link>
             )}
 
             {/* 4 Stats */}
